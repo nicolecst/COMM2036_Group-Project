@@ -1,0 +1,80 @@
+html {
+  background-color: #3a3b3c;
+}
+body {
+  margin: 0;
+}
+.nav-bar {
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: black;
+  height: 3rem;
+  align-items: center;
+}
+.nav-bar li {
+  margin-right: 10%;
+  font-family: "Black Ops One", system-ui;
+}
+.nav-bar a {
+  color: #fff;
+}
+.container {
+  background-color: #fff;
+  height: 80vh;
+  overflow: hidden;
+}
+.marquee-block {
+  width: 400px;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  /* margin: 20px 0 20px 220px; */
+  background: #1b2531;
+  padding: 30px 0;
+  float: left;
+}
+.marquee-inner {
+  display: block;
+  height: 200%;
+  width: 400px;
+  position: absolute;
+  margin: 20px 0 20px 70px;
+  animation: marqueeBottom 25s linear infinite;
+}
+.square {
+  width: 230px;
+  height: 230px;
+  display: block;
+  margin: 10px;
+  transition: all 0.2s ease-out;
+  background: blue;
+}
+@keyframes marqueeBottom {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+/*Font Styles*/
+.black-ops {
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.merriweather-regular {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+}
