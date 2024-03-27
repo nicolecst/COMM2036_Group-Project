@@ -22,44 +22,54 @@ body {
 .nav-bar a {
   color: #fff;
 }
-.container {
-  background-color: #fff;
+.container{
+  width: 100%;
   height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.marquee{
+  width: 25%;
+  height: 100%;
   overflow: hidden;
 }
-.marquee-block {
-  width: 400px;
-  height: 100vh;
-  overflow: hidden;
-  box-sizing: border-box;
-  position: relative;
-  /* margin: 20px 0 20px 220px; */
-  background: #1b2531;
-  padding: 30px 0;
-  float: left;
+.marquee-top{
+  animation: 30s marqueetop infinite linear
 }
-.marquee-inner {
-  display: block;
-  height: 200%;
-  width: 400px;
-  position: absolute;
-  margin: 20px 0 20px 70px;
-  animation: marqueeBottom 25s linear infinite;
+.marquee-bottom{
+  animation: 30s marqueebottom infinite linear
 }
-.square {
-  width: 230px;
-  height: 230px;
-  display: block;
-  margin: 10px;
-  transition: all 0.2s ease-out;
-  background: blue;
+.square{
+  height: 300px;
+  width: 280px;
+  background-color:aquamarine;
+  border: 1px solid #000;
+  margin: 10px auto;
 }
-@keyframes marqueeBottom {
-  0% {
-    top: -100%;
+img{
+  height: 400px;
+  width: 330px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+@keyframes marqueetop {
+  from{
+    transform: translateY(0);
   }
-  100% {
-    top: 0;
+  to{
+    transform: translateY(-100%);
+  }
+}
+@keyframes marqueebottom {
+  from{
+    transform: translateY(-100%);
+  }
+  to{
+    transform: translateY(0);
   }
 }
 
